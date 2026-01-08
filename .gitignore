@@ -1,0 +1,47 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfstate.backup
+.terraform.lock.hcl
+*.tfplan
+
+# Ключи Yandex Cloud (ОБЯЗАТЕЛЬНО!)
+authorized_key*.json
+*.json.key
+service-account-key.json
+
+# Переменные с секретами
+*.tfvars
+terraform.tfvars
+secrets.auto.tfvars
+
+# Файлы планов
+plan.out
+apply.out
+
+# Локальные файлы
+*.backup
+*.tmp
+.cache/
+
+# Редакторы/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# SSH ключи (если храните в проекте)
+*.pem
+*.ppk
+id_rsa
+id_dsa
+
+# Временные файлы
+temp/
+tmp/
