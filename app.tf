@@ -1,7 +1,11 @@
 resource "yandex_compute_instance" "app" {
-  name        = "backend"
+  count = 2 
+
+  name        = "backend-${count.index}"
   platform_id = "standard-v3"
   zone        = "ru-central1-a"
+
+  depends_on = [yandex_compute_instance.postgres]
 
   resources {
     cores  = 2
